@@ -52,3 +52,8 @@ flask run
 http://127.0.0.1:5000
 
 ```
+## 🎥 Demo Video
+
+Click the link below to watch the demo of the Number Guessing Game:
+
+👉 [Watch Demo Video](Demo.mp4)
