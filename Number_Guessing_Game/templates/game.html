@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %} GAME {% endblock %}
+{% block content %}
+
+
+
+    <div class="game-card">
+        <div class="game-header">
+            <div class="player-info">
+                <span class="label">PLAYER:</span>
+                <span class="value">{{session['user']}}</span>
+            </div>
+            <div class="chances-info">
+                <span class="label">ATTEMPTS LEFT:</span>
+                <span class="chance-badge">{{session['chances'] if session['chances'] else '5'}}</span>
+            </div>
+        </div>
+
+        <h2 class="game-prompt">Identify the Secret Number</h2>
+        <p class="game-prompt-limit">The Number is in between  1 - 10 </p>
+
+        <div class="message-container">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, msg in messages %}
+                        <div class="alert alert-{{category}}">{{ msg }}</div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            
+            {% if message %}
+                <div class="alert alert-info">{{ message }}</div>
+            {% endif %}
+        </div>
+
+        <form action="/guess" method="post" class="guess-form">
+            <input type="number" name="guessed_number" placeholder="00" min="1" max="100" required autofocus>
+            <button type="submit">Submit Guess</button>
+        </form>
+    </div>
+
+
+{% endblock %}

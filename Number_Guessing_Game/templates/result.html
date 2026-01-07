@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %} Game Result {% endblock %}
+{% block content %}
+
+<div class="result-overlay">
+    <div class="result-card {{ 'win' if result == 'success' else 'fail' }}">
+        
+        <h1 class="result-msg">
+            {{ "YOU GUESSED THE RIGHT NUMBER!" if result == 'success' else "YOU FAILED TO GUESS THE NUMBER" }}
+        </h1>
+
+        <div class="result-number">
+            {{ number }}
+        </div>
+
+        <a href="/" class="result-btn">Play Again</a>
+
+    </div>
+</div>
+
+{% endblock %}
