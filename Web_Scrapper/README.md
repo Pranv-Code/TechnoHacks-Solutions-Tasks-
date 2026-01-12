@@ -53,5 +53,10 @@ https://www.theguardian.com
 ### ⚠️ Limitations
 
 - JavaScript-heavy websites may not work
-
 - Headline detection is based on generic patterns
+  
+---
+
+### Click the link below to watch the demo of the News Scrapper :
+
+👉 [Watch Demo Video](./News_Scraper_Demo.mp4)
