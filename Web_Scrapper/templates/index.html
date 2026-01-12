@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>News Scraper</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>News Scraper</h2>
+
+    <form method="POST" class="search-form">
+        <input type="text" name="url" placeholder="Enter news website URL" required>
+        <button type="submit">Search</button>
+    </form>
+    {% if news %}
+    <h2>TOP 10 Headlines</h2>
+    {% endif %}
+    <div class="cards">
+        {% for item in news %}
+            <a href="{{ item.link }}" target="_blank" class="card">
+                {{ item.title }}
+            </a>
+        {% endfor %}
+    </div>
+</div>
+
+</body>
+</html>
