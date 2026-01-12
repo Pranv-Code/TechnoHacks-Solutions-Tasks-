@@ -49,7 +49,7 @@ https://edition.cnn.com
 
 https://www.theguardian.com
 ```
-
+---
 ### ⚠️ Limitations
 
 - JavaScript-heavy websites may not work
